@@ -91,13 +91,13 @@ export default function Footer() {
     <footer className="relative bg-[#060d1a] overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1B3A6B]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#C8960C]/6 rounded-full blur-[100px]" />
-        <div className="absolute top-1/2 left-0 w-64 h-64 bg-[#C8960C]/4 rounded-full blur-[80px]" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1A56DB]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#06B6D4]/6 rounded-full blur-[100px]" />
+        <div className="absolute top-1/2 left-0 w-64 h-64 bg-[#06B6D4]/4 rounded-full blur-[80px]" />
       </div>
 
       {/* Top accent line */}
-      <div className="h-px bg-gradient-to-r from-transparent via-[#C8960C]/50 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-[#06B6D4]/50 to-transparent" />
 
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-6 py-16">
@@ -130,7 +130,7 @@ export default function Footer() {
                     key={s.label}
                     href={s.href}
                     aria-label={s.label}
-                    className="w-9 h-9 rounded-xl bg-white/6 border border-white/8 flex items-center justify-center text-white/40 hover:text-[#C8960C] hover:bg-[#C8960C]/10 hover:border-[#C8960C]/30 transition-all duration-200 hover:-translate-y-0.5"
+                    className="w-9 h-9 rounded-xl bg-white/6 border border-white/8 flex items-center justify-center text-white/40 hover:text-[#06B6D4] hover:bg-[#06B6D4]/10 hover:border-[#06B6D4]/30 transition-all duration-200 hover:-translate-y-0.5"
                   >
                     {s.icon}
                   </a>
@@ -145,7 +145,7 @@ export default function Footer() {
                   key={s.label}
                   className="bg-white/4 border border-white/6 rounded-xl px-4 py-3"
                 >
-                  <p className="text-[#C8960C] font-bold text-lg leading-tight">{s.value}</p>
+                  <p className="text-[#06B6D4] font-bold text-lg leading-tight">{s.value}</p>
                   <p className="text-white/35 text-xs mt-0.5">{s.label}</p>
                 </div>
               ))}
@@ -222,8 +222,8 @@ export default function Footer() {
                 </h4>
                 <div className="space-y-3">
                   <a href="mailto:support@ewms.io" className="flex items-start gap-2.5 group">
-                    <div className="w-7 h-7 rounded-lg bg-white/6 border border-white/8 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:border-[#C8960C]/30 transition-colors">
-                      <svg className="w-3.5 h-3.5 text-white/40 group-hover:text-[#C8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-7 h-7 rounded-lg bg-white/6 border border-white/8 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:border-[#06B6D4]/30 transition-colors">
+                      <svg className="w-3.5 h-3.5 text-white/40 group-hover:text-[#06B6D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -233,8 +233,8 @@ export default function Footer() {
                   </a>
 
                   <a href="tel:+923001234567" className="flex items-start gap-2.5 group">
-                    <div className="w-7 h-7 rounded-lg bg-white/6 border border-white/8 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:border-[#C8960C]/30 transition-colors">
-                      <svg className="w-3.5 h-3.5 text-white/40 group-hover:text-[#C8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-7 h-7 rounded-lg bg-white/6 border border-white/8 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:border-[#06B6D4]/30 transition-colors">
+                      <svg className="w-3.5 h-3.5 text-white/40 group-hover:text-[#06B6D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
@@ -256,11 +256,11 @@ export default function Footer() {
                   </div>
 
                   {/* SOC 2 badge */}
-                  {/* <div className="flex items-center gap-2 bg-[#C8960C]/8 border border-[#C8960C]/20 rounded-xl px-3 py-2.5">
-                    <svg className="w-4 h-4 text-[#C8960C] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {/* <div className="flex items-center gap-2 bg-[#06B6D4]/8 border border-[#06B6D4]/20 rounded-xl px-3 py-2.5">
+                    <svg className="w-4 h-4 text-[#06B6D4] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
-                    <span className="text-[#C8960C]/80 text-xs font-medium">SOC 2 Compliant</span>
+                    <span className="text-[#06B6D4]/80 text-xs font-medium">SOC 2 Compliant</span>
                   </div> */}
                 </div>
               </div>
@@ -268,10 +268,10 @@ export default function Footer() {
             {/* ── end top nav row ── */}
 
             {/* Bottom row: full-width newsletter spanning all 4 columns */}
-            <div className="relative overflow-hidden mt-[90px] rounded-2xl border border-white/8 bg-gradient-to-r from-[#1B3A6B]/30 via-[#0f2448]/20 to-[#C8960C]/10 px-8 py-6">
+            <div className="relative overflow-hidden mt-[90px] rounded-2xl border border-white/8 bg-gradient-to-r from-[#1A56DB]/30 via-[#0f2448]/20 to-[#06B6D4]/10 px-8 py-6">
               {/* Decorative glow blobs */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#C8960C]/15 rounded-full blur-2xl pointer-events-none" />
-              <div className="absolute -bottom-6 left-1/3 w-24 h-24 bg-[#1B3A6B]/30 rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#06B6D4]/15 rounded-full blur-2xl pointer-events-none" />
+              <div className="absolute -bottom-6 left-1/3 w-24 h-24 bg-[#1A56DB]/30 rounded-full blur-2xl pointer-events-none" />
               {/* Subtle grid pattern overlay */}
               <div
                 className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -285,15 +285,15 @@ export default function Footer() {
               <div className=" relative flex flex-col sm:flex-row sm:items-center justify-between gap-5">
                 {/* Left: icon + text */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#C8960C]/15 border border-[#C8960C]/25 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-[#C8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 rounded-xl bg-[#06B6D4]/15 border border-[#06B6D4]/25 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-[#06B6D4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-1">
                       <p className="text-white font-bold text-sm">Stay ahead of the curve</p>
-                      <span className="bg-[#C8960C]/20 text-[#C8960C] text-[10px] font-semibold px-2 py-0.5 rounded-full border border-[#C8960C]/30">
+                      <span className="bg-[#06B6D4]/20 text-[#06B6D4] text-[10px] font-semibold px-2 py-0.5 rounded-full border border-[#06B6D4]/30">
                         Free
                       </span>
                     </div>
@@ -305,13 +305,13 @@ export default function Footer() {
 
                 {/* Right: form or success */}
                 {subscribed ? (
-                  <div className="flex items-center gap-2.5 bg-[#C8960C]/10 border border-[#C8960C]/25 rounded-xl px-5 py-3 whitespace-nowrap">
-                    <div className="w-5 h-5 rounded-full bg-[#C8960C] flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-center gap-2.5 bg-[#06B6D4]/10 border border-[#06B6D4]/25 rounded-xl px-5 py-3 whitespace-nowrap">
+                    <div className="w-5 h-5 rounded-full bg-[#06B6D4] flex items-center justify-center flex-shrink-0">
                       <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-[#C8960C] font-semibold text-sm">You&apos;re subscribed!</span>
+                    <span className="text-[#06B6D4] font-semibold text-sm">You&apos;re subscribed!</span>
                   </div>
                 ) : (
                   <form onSubmit={handleSubscribe} className="flex gap-2 w-full sm:w-auto">
@@ -325,12 +325,12 @@ export default function Footer() {
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="your@email.com"
                         required
-                        className="w-full bg-white/8 border border-white/12 text-white placeholder-white/25 text-sm pl-9 pr-4 py-2.5 rounded-xl outline-none focus:border-[#C8960C]/60 focus:bg-white/12 focus:shadow-[0_0_0_3px_rgba(200,150,12,0.1)] transition-all"
+                        className="w-full bg-white/8 border border-white/12 text-white placeholder-white/25 text-sm pl-9 pr-4 py-2.5 rounded-xl outline-none focus:border-[#06B6D4]/60 focus:bg-white/12 focus:shadow-[0_0_0_3px_rgba(200,150,12,0.1)] transition-all"
                       />
                     </div>
                     <button
                       type="submit"
-                      className="group relative overflow-hidden bg-[#C8960C] hover:bg-[#b8830a] text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#C8960C]/30 whitespace-nowrap"
+                      className="group relative overflow-hidden bg-[#06B6D4] hover:bg-[#0891b2] text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#06B6D4]/30 whitespace-nowrap"
                     >
                       <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12" />
                       Subscribe →

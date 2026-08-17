@@ -11,7 +11,7 @@ const features = [
     ),
     title: "Smart Request Routing",
     desc: "HOD initiates requests and selects relevant departments. System automatically routes approvals through the correct hierarchy.",
-    variant: "navy",
+    variant: "blue",
   },
   {
     icon: (
@@ -21,7 +21,7 @@ const features = [
     ),
     title: "Executive Approval Chain",
     desc: "Every request flows through COO → CFO → CEO for final authorization — structured, transparent and fully traceable.",
-    variant: "gold",
+    variant: "teal",
   },
   {
     icon: (
@@ -31,7 +31,7 @@ const features = [
     ),
     title: "Complete Audit Trail",
     desc: "Every action, comment, revision, and approval is logged with timestamps. Full accountability at every step.",
-    variant: "navy",
+    variant: "blue",
   },
   {
     icon: (
@@ -41,7 +41,7 @@ const features = [
     ),
     title: "Real-Time Notifications",
     desc: "Instant alerts for approvals, rejections, revisions and escalations keep all stakeholders informed without delays.",
-    variant: "gold",
+    variant: "teal",
   },
   {
     icon: (
@@ -51,7 +51,7 @@ const features = [
     ),
     title: "Document Attachments",
     desc: "Attach supporting documents to any request. Reviewers access everything they need in one centralized place.",
-    variant: "navy",
+    variant: "blue",
   },
   {
     icon: (
@@ -61,20 +61,20 @@ const features = [
     ),
     title: "Advanced Reporting",
     desc: "Detailed analytics and reports on workflow performance, bottlenecks, turnaround time and department-wise activity.",
-    variant: "gold",
+    variant: "teal",
   },
 ];
 
 function FeatureCard({ f, i, visible }) {
-  const isNavy = f.variant === "navy";
+  const isTeal = f.variant === "teal";
 
-  const accent       = isNavy ? "#4A7FD4" : "#E8A800";
-  const accentStrong = isNavy ? "rgba(74,127,212,0.55)" : "rgba(232,168,0,0.55)";
-  const accentBorder = isNavy ? "rgba(74,127,212,0.45)" : "rgba(232,168,0,0.45)";
-  const accentGlow   = isNavy ? "rgba(74,127,212,0.20)" : "rgba(232,168,0,0.20)";
-  const iconBg       = isNavy
-    ? "linear-gradient(135deg, rgba(74,127,212,0.30) 0%, rgba(27,58,107,0.45) 100%)"
-    : "linear-gradient(135deg, rgba(232,168,0,0.30) 0%, rgba(180,120,0,0.45) 100%)";
+  const accent       = isTeal ? "#06B6D4" : "#1A56DB";
+  const accentStrong = isTeal ? "rgba(6,182,212,0.55)"  : "rgba(26,86,219,0.55)";
+  const accentBorder = isTeal ? "rgba(6,182,212,0.45)"  : "rgba(26,86,219,0.45)";
+  const accentGlow   = isTeal ? "rgba(6,182,212,0.20)"  : "rgba(26,86,219,0.20)";
+  const iconBg       = isTeal
+    ? "linear-gradient(135deg, rgba(6,182,212,0.30) 0%, rgba(3,105,161,0.45) 100%)"
+    : "linear-gradient(135deg, rgba(26,86,219,0.30) 0%, rgba(10,40,120,0.45) 100%)";
 
   return (
     <div
@@ -83,12 +83,10 @@ function FeatureCard({ f, i, visible }) {
       }`}
       style={{ transitionDelay: `${i * 110 + 200}ms` }}
     >
-      {/* Outer border glow wrapper */}
       <div
         className="group relative rounded-3xl p-px transition-all duration-500 hover:-translate-y-2 cursor-default"
         style={{
           background: `linear-gradient(135deg, ${accentBorder}, rgba(255,255,255,0.06) 50%, ${accentBorder})`,
-          boxShadow: `0 0 0 0 transparent`,
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.boxShadow = `0 0 28px 4px ${accentGlow}, 0 20px 50px -12px ${accentGlow}`;
@@ -97,12 +95,11 @@ function FeatureCard({ f, i, visible }) {
           e.currentTarget.style.boxShadow = `0 0 0 0 transparent`;
         }}
       >
-        {/* Card body */}
         <div
           className="relative h-full rounded-3xl overflow-hidden p-7 flex flex-col gap-5"
           style={{
             background:
-              "linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(10,18,35,0.85) 60%, rgba(255,255,255,0.04) 100%)",
+              "linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(6,13,26,0.85) 60%, rgba(255,255,255,0.04) 100%)",
             backdropFilter: "blur(24px)",
             WebkitBackdropFilter: "blur(24px)",
           }}
@@ -115,20 +112,13 @@ function FeatureCard({ f, i, visible }) {
             }}
           />
 
-          {/* Top-right corner glow */}
-          <div
-            className="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl opacity-0 group-hover:opacity-70 transition-all duration-500 pointer-events-none"
-            style={{ background: accentStrong }}
-          />
-          {/* Bottom-left soft glow */}
-          <div
-            className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full blur-2xl opacity-0 group-hover:opacity-35 transition-all duration-700 pointer-events-none"
-            style={{ background: accent }}
-          />
+          <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl opacity-0 group-hover:opacity-70 transition-all duration-500 pointer-events-none"
+            style={{ background: accentStrong }} />
+          <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full blur-2xl opacity-0 group-hover:opacity-35 transition-all duration-700 pointer-events-none"
+            style={{ background: accent }} />
 
-          {/* Top row: icon only */}
+          {/* Icon + Title */}
           <div className="flex items-center gap-4">
-            {/* Icon box */}
             <div
               className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
               style={{
@@ -140,20 +130,12 @@ function FeatureCard({ f, i, visible }) {
             >
               {f.icon}
             </div>
-
-            {/* Title beside icon */}
-            <h3 className="text-white font-bold text-[15px] leading-snug">
-              {f.title}
-            </h3>
+            <h3 className="text-white font-bold text-[15px] leading-snug">{f.title}</h3>
           </div>
 
-          {/* Divider line */}
-          <div
-            className="h-px w-full"
-            style={{
-              background: `linear-gradient(90deg, ${accentBorder}, transparent 80%)`,
-            }}
-          />
+          {/* Divider */}
+          <div className="h-px w-full"
+            style={{ background: `linear-gradient(90deg, ${accentBorder}, transparent 80%)` }} />
 
           {/* Description */}
           <p className="text-white/55 text-sm leading-relaxed group-hover:text-white/80 transition-colors duration-400 flex-1">
@@ -171,17 +153,11 @@ function FeatureCard({ f, i, visible }) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </div>
-
-            {/* Animated pulse dots */}
             <div className="flex items-center gap-1.5">
-              <span
-                className="w-1.5 h-1.5 rounded-full animate-ping opacity-70"
-                style={{ background: accent, animationDuration: `${1.4 + i * 0.25}s` }}
-              />
-              <span
-                className="w-1.5 h-1.5 rounded-full opacity-40"
-                style={{ background: accent }}
-              />
+              <span className="w-1.5 h-1.5 rounded-full animate-ping opacity-70"
+                style={{ background: accent, animationDuration: `${1.4 + i * 0.25}s` }} />
+              <span className="w-1.5 h-1.5 rounded-full opacity-40"
+                style={{ background: accent }} />
             </div>
           </div>
         </div>
@@ -206,42 +182,27 @@ export default function Features() {
   return (
     <section id="features" className="py-28 relative overflow-hidden">
 
-      {/* ── Background ── */}
       <div className="absolute inset-0 bg-[#080f1e]" />
-
-      <div
-        className="absolute top-[-20%] left-[-15%] w-[700px] h-[700px] rounded-full opacity-40 animate-pulse"
-        style={{ background: "radial-gradient(circle, rgba(27,58,107,0.9) 0%, transparent 65%)", animationDuration: "6s" }}
-      />
-      <div
-        className="absolute bottom-[-20%] right-[-15%] w-[700px] h-[700px] rounded-full opacity-30 animate-pulse"
-        style={{ background: "radial-gradient(circle, rgba(200,150,12,0.8) 0%, transparent 65%)", animationDuration: "8s" }}
-      />
-      <div
-        className="absolute top-1/2 right-[15%] w-[350px] h-[350px] rounded-full opacity-15 animate-pulse"
-        style={{ background: "radial-gradient(circle, rgba(27,58,107,0.9) 0%, transparent 65%)", animationDuration: "10s" }}
-      />
+      <div className="absolute top-[-20%] left-[-15%] w-[700px] h-[700px] rounded-full opacity-40 animate-pulse"
+        style={{ background: "radial-gradient(circle, rgba(26,86,219,0.7) 0%, transparent 65%)", animationDuration: "6s" }} />
+      <div className="absolute bottom-[-20%] right-[-15%] w-[700px] h-[700px] rounded-full opacity-30 animate-pulse"
+        style={{ background: "radial-gradient(circle, rgba(6,182,212,0.6) 0%, transparent 65%)", animationDuration: "8s" }} />
 
       {/* Grid */}
-      <div
-        className="absolute inset-0 opacity-[0.035]"
+      <div className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(200,150,12,1) 1px, transparent 1px), linear-gradient(90deg, rgba(200,150,12,1) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(6,182,212,1) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,1) 1px, transparent 1px)",
           backgroundSize: "65px 65px",
-        }}
-      />
+        }} />
 
       {/* Floating dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(22)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full animate-bounce"
+          <div key={i} className="absolute rounded-full animate-bounce"
             style={{
               width: i % 4 === 0 ? "3px" : "2px",
               height: i % 4 === 0 ? "3px" : "2px",
-              background: i % 2 === 0 ? "rgba(200,150,12,0.45)" : "rgba(27,58,107,0.6)",
+              background: i % 2 === 0 ? "rgba(6,182,212,0.45)" : "rgba(26,86,219,0.6)",
               left: `${(i * 17 + 3) % 97}%`,
               top: `${(i * 29 + 7) % 93}%`,
               animationDelay: `${i * 0.35}s`,
@@ -251,25 +212,20 @@ export default function Features() {
         ))}
       </div>
 
-      {/* ── Content ── */}
       <div className="relative z-10 max-w-7xl mx-auto px-6" ref={ref}>
 
         {/* Header */}
-        <div
-          className={`text-center mb-20 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-        >
-          <div className="inline-flex items-center gap-2 bg-[#C8960C]/12 border border-[#C8960C]/25 text-[#C8960C] text-xs font-bold px-5 py-2 rounded-full mb-6 tracking-widest uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C8960C] animate-pulse" />
+        <div className={`text-center mb-20 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+          <div className="inline-flex items-center gap-2 bg-[#06B6D4]/12 border border-[#06B6D4]/25 text-[#06B6D4] text-xs font-bold px-5 py-2 rounded-full mb-6 tracking-widest uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#06B6D4] animate-pulse" />
             Platform Capabilities
           </div>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-5 leading-tight">
             Everything You Need to{" "}
             <span className="relative inline-block">
-              <span className="text-[#C8960C]">Manage Workflows</span>
+              <span className="text-[#06B6D4]">Manage Workflows</span>
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 420 10" fill="none">
-                <path d="M2 7 Q105 1 210 7 Q315 13 418 7" stroke="#C8960C" strokeWidth="2.5" strokeLinecap="round" opacity="0.45" />
+                <path d="M2 7 Q105 1 210 7 Q315 13 418 7" stroke="#06B6D4" strokeWidth="2.5" strokeLinecap="round" opacity="0.45" />
               </svg>
             </span>
           </h2>
@@ -288,31 +244,23 @@ export default function Features() {
 
         {/* Bottom CTA strip */}
         <div
-          className={`mt-14 rounded-2xl p-px transition-all duration-700 delay-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-          style={{
-            background: "linear-gradient(135deg, rgba(200,150,12,0.3), rgba(27,58,107,0.3))",
-          }}
+          className={`mt-14 rounded-2xl p-px transition-all duration-700 delay-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+          style={{ background: "linear-gradient(135deg, rgba(6,182,212,0.3), rgba(26,86,219,0.3))" }}
         >
           <div
             className="rounded-2xl px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-5"
             style={{
-              background: "linear-gradient(135deg, rgba(27,58,107,0.4) 0%, rgba(8,15,30,0.8) 100%)",
+              background: "linear-gradient(135deg, rgba(26,86,219,0.25) 0%, rgba(6,13,26,0.8) 100%)",
               backdropFilter: "blur(16px)",
             }}
           >
             <div>
-              <p className="text-white font-bold text-lg mb-1">
-                Ready to digitize your approval process?
-              </p>
-              <p className="text-white/40 text-sm">
-                All features available from day one — no complex setup required.
-              </p>
+              <p className="text-white font-bold text-lg mb-1">Ready to digitize your approval process?</p>
+              <p className="text-white/40 text-sm">All features available from day one — no complex setup required.</p>
             </div>
             <a
               href="#workflow"
-              className="group flex-shrink-0 inline-flex items-center gap-2 bg-[#C8960C] hover:bg-[#d4a015] text-white font-bold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-[#C8960C]/25 hover:-translate-y-0.5 whitespace-nowrap overflow-hidden relative"
+              className="group flex-shrink-0 inline-flex items-center gap-2 bg-[#1A56DB] hover:bg-[#1648c0] text-white font-bold px-7 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-[#1A56DB]/25 hover:-translate-y-0.5 whitespace-nowrap overflow-hidden relative"
             >
               <span className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12" />
               See How It Works

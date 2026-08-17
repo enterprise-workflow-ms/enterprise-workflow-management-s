@@ -24,7 +24,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/98 shadow-lg shadow-[#1B3A6B]/8 backdrop-blur-md border-b border-gray-100"
+          ? "bg-white/98 shadow-lg shadow-[#1A56DB]/8 backdrop-blur-md border-b border-gray-100"
           : "bg-transparent"
       }`}
     >
@@ -36,7 +36,7 @@ export default function Navbar() {
           {!scrolled && (
             <>
               <div className="absolute -inset-3 rounded-2xl bg-white/8 group-hover:bg-white/15 blur-sm transition-all duration-500" />
-              <div className="absolute -inset-2 rounded-xl mb-2 mt-1 border border-white/10 group-hover:border-[#C8960C]/30 transition-all duration-500" />
+              <div className="absolute -inset-2 rounded-xl mb-2 mt-1 border border-white/10 group-hover:border-[#06B6D4]/30 transition-all duration-500" />
             </>
           )}
           <Image
@@ -57,13 +57,13 @@ export default function Navbar() {
               href={link.href}
               className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
                 scrolled
-                  ? "text-gray-600 hover:text-[#1B3A6B]"
+                  ? "text-gray-600 hover:text-[#1A56DB]"
                   : "text-white/80 hover:text-white"
               }`}
             >
               <span className="relative z-10">{link.label}</span>
-              <span className="absolute inset-0 rounded-lg bg-[#1B3A6B]/8 scale-75 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300" />
-              <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#C8960C] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full" />
+              <span className="absolute inset-0 rounded-lg bg-[#1A56DB]/8 scale-75 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300" />
+              <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#06B6D4] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full" />
             </a>
           ))}
         </div>
@@ -74,8 +74,8 @@ export default function Navbar() {
             href="/login"
             className={`group hidden md:inline-flex items-center gap-2.5 font-semibold text-sm px-6 py-2.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 overflow-hidden relative ${
               scrolled
-                ? "bg-[#1B3A6B] text-white shadow-md shadow-[#1B3A6B]/25 hover:bg-[#15305a] hover:shadow-lg hover:shadow-[#1B3A6B]/35"
-                : "bg-white text-[#1B3A6B] shadow-lg shadow-black/20 hover:bg-gray-50 hover:shadow-xl"
+                ? "bg-[#1A56DB] text-white shadow-md shadow-[#1A56DB]/25 hover:bg-[#1648c0] hover:shadow-lg hover:shadow-[#1A56DB]/35"
+                : "bg-white text-[#1A56DB] shadow-lg shadow-black/20 hover:bg-gray-50 hover:shadow-xl"
             }`}
           >
             {/* Shimmer sweep */}
@@ -101,7 +101,7 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              scrolled ? "text-[#1B3A6B]" : "text-white"
+              scrolled ? "text-[#1A56DB]" : "text-white"
             }`}
             aria-label="Toggle menu"
           >
@@ -138,14 +138,14 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-gray-700 hover:text-[#1B3A6B] font-medium py-2 px-3 rounded-lg hover:bg-[#1B3A6B]/5 transition-colors"
+              className="text-gray-700 hover:text-[#1A56DB] font-medium py-2 px-3 rounded-lg hover:bg-[#1A56DB]/5 transition-colors"
             >
               {link.label}
             </a>
           ))}
           <Link
             href="/login"
-            className="mt-2 bg-[#1B3A6B] text-white text-sm font-semibold px-5 py-3 rounded-xl text-center flex items-center justify-center gap-2"
+            className="mt-2 bg-[#1A56DB] text-white text-sm font-semibold px-5 py-3 rounded-xl text-center flex items-center justify-center gap-2"
             onClick={() => setMenuOpen(false)}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
