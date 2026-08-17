@@ -350,7 +350,7 @@ export default function HowItWorks() {
         </div>
 
         {/* ── Stats strip ── */}
-        <div className={`mt-16 transition-all duration-700 delay-[900ms] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+        {/* <div className={`mt-16 transition-all duration-700 delay-[900ms] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
           <div className="rounded-2xl p-px"
             style={{ background:"linear-gradient(135deg,rgba(74,127,212,0.4),rgba(232,168,0,0.3))" }}>
             <div className="rounded-2xl px-8 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
@@ -376,7 +376,7 @@ export default function HowItWorks() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>
